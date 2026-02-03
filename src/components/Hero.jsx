@@ -12,21 +12,8 @@ function Hero() {
   return (
     <section 
       id="home" 
-      className="relative mt-20 min-h-[calc(100vh-5rem)] w-full flex flex-col items-center justify-center bg-white text-black overflow-hidden"
+      className="relative mt-20 min-h-[calc(100vh-5rem)] w-full flex flex-col items-center justify-center bg-transparent text-black overflow-hidden"
     >
-      <div className="absolute inset-0 z-0 opacity-10 w-full h-full pointer-events-none"
-        style={{
-          backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)',
-          backgroundSize: '40px 40px'
-        }}
-      ></div>
-      
-      <div className="absolute inset-0 z-0 opacity-10 w-full h-full pointer-events-none"
-        style={{
-          backgroundImage: 'radial-gradient(#000 1px, transparent 1px)',
-          backgroundSize: '20px 20px'
-        }}
-      ></div>
       
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center gap-6">
         

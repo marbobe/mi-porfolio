@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useScrollSpy } from "../hooks/useScrollSpy";
 
 function Navbar(){
     const{ t, i18n } = useTranslation();
@@ -12,6 +13,9 @@ function Navbar(){
         { name: t('nav.projects'), id: 'projects' },
         { name: t('nav.contact'), id: 'contact' },
     ]
+
+    const activeId = useScrollSpy(navLinks.map(link => link.id));
+
     return (
         <nav className="fixed top-0 left-0 w-full bg-white border-b-4 border-black z-50">
         
@@ -28,21 +32,28 @@ function Navbar(){
             {/* 2. LOS ENLACES (Centro - Solo visibles en pantallas medianas 'md' para arriba) */}
             <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-8">
-                {navLinks.map((link) => (
+                {navLinks.map((link) => {
+                    const isActive = activeId === link.id && link.id !== 'home';
+                    return(
                     <a
                     key={link.id} // Siempre necesaria una key única al usar map
                     href={`#${link.id}`} // Enlace ancla (ej: #projects)
-                    className="
-                        font-mono font-bold text-lg text-black 
-                        hover:bg-yellow-400 hover:text-black 
-                        px-3 py-2 border-2 border-transparent 
-                        hover:border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
-                        transition-all duration-200
-                    "
+                    className={`
+        font-mono font-bold text-lg px-3 py-2 border-2 transition-all duration-200
+        
+        ${isActive 
+
+          ? 'bg-yellow-400 text-black border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]' 
+          
+ 
+          : 'text-black border-transparent hover:bg-yellow-400 hover:text-black hover:border-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]'
+        }
+      `}
                     >
                     {link.name}
                     </a>
-                ))}
+                );
+            })}
                 </div>
             </div>
 

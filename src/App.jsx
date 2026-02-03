@@ -6,13 +6,26 @@ function App() {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-gray-50 text-black">
+    <div className="relative min-h-screen text-black">
+      <div className="fixed inset-0 z-0 opacity-10 w-full h-full pointer-events-none"
+        style={{
+          backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}
+      ></div>
+      
+      <div className="fixed inset-0 z-0 opacity-10 w-full h-full pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(#000 1px, transparent 1px)',
+          backgroundSize: '20px 20px'
+        }}
+      ></div>
       
       <Navbar />
 
-      <main className="flex flex-col w-full"> 
+      <main className="flex flex-col w-full relative z-10"> 
         
-        <Hero /> 
+        <Hero id="home"/> 
         
         <div className="px-4 flex flex-col items-center gap-10">
             {/* Nota: scroll-mt-24 ayuda a que al bajar, la navbar no tape el título */}
