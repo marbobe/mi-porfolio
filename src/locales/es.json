@@ -1,7 +1,25 @@
 {
   "welcome_title": "¡Hola Mundo!",
   "welcome_text": "Este es mi primer componente estilo Neo-Brutalism.",
-  "button_click": "Púlsame",
-  "nav_home": "Inicio",
-  "nav_projects": "Proyectos"
+  "button_click": "Púlsame", 
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "MAR BOU",
+    "roles": [
+      "Desarrollador Full-Stack",
+      "Ingeniero de Software",
+      "Desarrollador Web",
+      "Especialista Frontend",
+      "Apasionado por React"
+    ],
+    "button_projects": "Ver Proyectos",
+    "button_contact": "Contactar"
+  }
 }
