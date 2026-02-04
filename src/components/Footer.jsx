@@ -66,7 +66,7 @@ function Footer() {
         <p>© {currentYear} {t('generic.title')}. {t('footer.rights')}</p>
         <div className="flex items-center gap-1 mt-2 md:mt-0">
             <span>{t('footer.created')}</span>
-            <span className="inline-block min-w-[68px] text-left"> 
+            <span className="inline-block min-w-[75px] text-left"> 
                 <TypeAnimation
                     key={i18n.language}
                     sequence={typingSequence}

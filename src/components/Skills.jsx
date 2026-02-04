@@ -115,7 +115,9 @@ function Skills(){
                         key={index}
                         className="
                             flex items-center gap-3 p-2 bg-white border-2 border-black
-                            hover:bg-black hover:text-white
+                            hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] 
+                            hover:-translate-y-1
+                            hover:bg-yellow-50
                             transition-all duration-200 group
                         "
                     >
@@ -145,7 +147,7 @@ function Skills(){
                                     <div className={`text-3xl ${style.color}`}>{style.icon}</div>
                                     {/* Badge de estado */}
                                     <span className={`text-xs font-bold px-2 py-1 border-2 border-black bg-white uppercase ${course.status === 'doing' ? 'text-yellow-600' : 'text-green-600'}`}>
-                                        {course.status === 'doing' ? 'En Proceso' : 'Completado'}
+                                        {course.status === 'doing' ? t('skills.certifications.status_progress') : t('skills.certifications.status_completed')}
                                     </span>
                                 </div>
                                 
@@ -157,7 +159,7 @@ function Skills(){
                                         <span className="font-mono text-sm font-bold bg-black text-white px-2">{course.hours}</span>
                                         {course.status === 'completed' && (
                                             <a href={course.link} target="_blank" className="font-bold text-sm underline decoration-2 hover:text-violet-600">
-                                                Ver Credencial &rarr;
+                                                {t('skills.certifications.link')} &rarr;
                                             </a>
                                         )}
                                     </div>
