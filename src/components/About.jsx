@@ -20,11 +20,11 @@ function About(){
         
         {/* TÍTULO DE LA SECCIÓN con decoración */}
         <div className="flex items-center gap-4 mb-16">
+            <div className="w-8 h-8 bg-black"></div>  {/* Cuadrado decorativo */}
             <h2 className="text-5xl md:text-6xl font-black font-grotesk uppercase">
                 {t('about.title')}
             </h2>
             <div className="flex-1 h-2 bg-black"></div> {/* Línea decorativa */}
-            <div className="w-8 h-8 bg-yellow-400 border-2 border-black"></div> {/* Cuadrado decorativo */}
         </div>
 
         {/* CONTENIDO: GRID DE 2 COLUMNAS */}

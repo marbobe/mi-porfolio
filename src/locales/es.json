@@ -51,6 +51,28 @@
         "link": "Ver Credencial"
     }
   },
+  "projects": {
+    "title": "PROYECTOS DESTACADOS",
+    "btn_repo": "CÓDIGO",
+    "btn_demo": "VER WEB",
+    "list": [
+      {
+        "title": "E-Commerce Dashboard",
+        "desc": "Panel de administración completo con gráficos, gestión de usuarios y modo oscuro.",
+        "tags": ["React", "Tailwind", "ChartJS"]
+      },
+      {
+        "title": "Task Manager API",
+        "desc": "Backend robusto para gestión de tareas con autenticación JWT y base de datos Mongo.",
+        "tags": ["Node.js", "Express", "MongoDB"]
+      },
+      {
+        "title": "Portfolio Personal",
+        "desc": "Este mismo sitio web. Diseño Neo-Brutalism, internacionalización y formulario funcional.",
+        "tags": ["React", "i18next", "EmailJS"]
+      }
+    ]
+  },
   "contact": {
     "title": "CONTACTO",
     "text": "¿Tienes un proyecto en mente o simplemente quieres saludar? ¡Escríbeme!",

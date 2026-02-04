@@ -23,8 +23,7 @@ function Skills(){
     { name: "Java", category: "backend", icon: <FaJava className="text-red-500"/> },
     { name: "Spring Boot", category: "backend", icon: <SiSpringboot className="text-green-500"/> },
     { name: "Node.js", category: "backend", icon: <FaNodeJs className="text-green-600"/> },
-    { name: "Express", category: "backend", icon: <SiExpress className="text-black"/> },
-    { name: "PHP", category: "backend", icon: <span className="font-bold text-indigo-700">PHP</span> }, 
+    { name: "Express", category: "backend", icon: <SiExpress className="text-black"/> },    
     { name: "Laravel", category: "backend", icon: <SiLaravel className="text-red-600"/> },
     { name: "REST API", category: "backend", icon: <TbApi className="text-gray-700"/> },
     { name: "GraphQL", category: "backend", icon: <SiGraphql className="text-pink-600"/> },
@@ -81,11 +80,11 @@ function Skills(){
         <div className="max-w-7xl mx-auto px-4">
              
              <div className="flex items-center gap-4 mb-10">
+                <div className="w-8 h-8 bg-black"></div>  {/* Cuadrado decorativo */}
                 <h2 className="text-5xl md:text-6xl font-black font-grotesk uppercase text-center md:text-left">
                 {t('skills.title')}
                 </h2>
                 <div className="flex-1 h-2 bg-black"></div> {/* Línea decorativa */}
-                <div className="w-8 h-8 bg-violet-600 border-2 border-black"></div> {/* Cuadrado decorativo */}
              </div>
             
 

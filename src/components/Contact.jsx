@@ -29,12 +29,12 @@ function Contact() {
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
       .then((result) => {
           console.log(result.text);
-          alert("¡Mensaje enviado con éxito! Gracias por contactar.");
+          setFeedback('success');
           formRef.current.reset();
           setIsSending(false);
       }, (error) => {
           console.log(error.text);
-          alert("Hubo un error al enviar el mensaje. Por favor, inténtalo más tarde.");
+          setFeedback('error');
           setIsSending(false);
       });
   };
@@ -45,11 +45,12 @@ function Contact() {
 
          {/* TÍTULO DE LA SECCIÓN con decoración */}
         <div className="flex items-center gap-4 mb-16">
+            <div className="w-8 h-8 bg-black"></div>  {/* Cuadrado decorativo */}
             <h2 className="text-5xl md:text-6xl font-black font-grotesk uppercase">
                 {t('contact.title')}
             </h2>
             <div className="flex-1 h-2 bg-black"></div> {/* Línea decorativa */}
-            <div className="w-8 h-8 bg-white border-2 border-black"></div> {/* Cuadrado decorativo */}
+
         </div>
         
         {/* ESTRUCTURA GRID: 12 columnas en total */}

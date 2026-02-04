@@ -51,6 +51,28 @@
         "link": "View Credential"
     }
   },
+  "projects": {
+    "title": "FEATURED PROJECTS",
+    "btn_repo": "CODE",
+    "btn_demo": "LIVE DEMO",
+    "list": [
+      {
+        "title": "E-Commerce Dashboard",
+        "desc": "Full admin dashboard with charts, user management, and dark mode toggle.",
+        "tags": ["React", "Tailwind", "ChartJS"]
+      },
+      {
+        "title": "Task Manager API",
+        "desc": "Robust backend for task management with JWT authentication and Mongo database.",
+        "tags": ["Node.js", "Express", "MongoDB"]
+      },
+      {
+        "title": "Personal Portfolio",
+        "desc": "This very website. Neo-Brutalism design, i18n support, and functional forms.",
+        "tags": ["React", "i18next", "EmailJS"]
+      }
+    ]
+  },
   "contact": {
     "title": "GET IN TOUCH",
     "text": "Have a project in mind or just want to say hi? Send me a message!",
