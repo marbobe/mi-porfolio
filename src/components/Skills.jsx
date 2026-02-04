@@ -99,7 +99,7 @@ function Skills(){
                             px-4 py-1 font-mono font-bold uppercase text-base border-2 border-black transition-all
                             ${filter === cat 
                                 ? 'bg-black text-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] translate-y-1' 
-                                : 'bg-white text-black hover:bg-violet-200 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-2px]'
+                                : 'bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] hover:translate-y-1 '
                             }
                         `}
                     >
@@ -117,7 +117,7 @@ function Skills(){
                             flex items-center gap-3 p-2 bg-white border-2 border-black
                             hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] 
                             hover:-translate-y-1
-                            hover:bg-yellow-50
+                            hover:bg-violet-100
                             transition-all duration-200 group
                         "
                     >

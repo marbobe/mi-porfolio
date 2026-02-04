@@ -51,6 +51,17 @@
         "link": "View Credential"
     }
   },
+  "contact": {
+    "title": "GET IN TOUCH",
+    "text": "Have a project in mind or just want to say hi? Send me a message!",
+    "email_label": "Your Email",
+    "name_label": "Your Name",
+    "message_label": "Your Message",
+    "message_title": "Message me",
+    "send_btn": "SEND MESSAGE",
+    "socials": "FIND ME ON",
+    "greeting": "LET'S WORK TOGETHER."
+  },
   "footer": {
     "text": "Have an idea?",
     "cta": "LET'S TALK",

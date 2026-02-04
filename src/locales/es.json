@@ -51,6 +51,18 @@
         "link": "Ver Credencial"
     }
   },
+  "contact": {
+    "title": "CONTACTO",
+    "text": "¿Tienes un proyecto en mente o simplemente quieres saludar? ¡Escríbeme!",
+    "email_label": "Tu Email",
+    "name_label": "Tu Nombre",
+    "message_label": "Tu Mensaje",
+    "message_title": "Escríbeme",
+    "send_btn": "ENVIAR MENSAJE",
+    "socials": "ENCUÉNTRAME EN",
+    "greeting": "TRABAJEMOS JUNTOS."
+ 
+  },
   "footer": {
     "text": "¿Tienes una idea?",
     "cta": "HABLEMOS",
