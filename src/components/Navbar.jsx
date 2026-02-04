@@ -25,7 +25,7 @@ function Navbar(){
             {/* 1. EL LOGO (Izquierda) */}
             <div className="flex-shrink-0">
                 <span className="font-mono text-2xl font-bold tracking-tighter">
-                MI_PORTFOLIO
+                {t('generic.title')}
                 </span>
             </div>
 

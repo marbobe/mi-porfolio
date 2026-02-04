@@ -1,5 +1,8 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Footer from './components/Footer';
 import { useTranslation } from 'react-i18next';
 
 function App() {
@@ -25,17 +28,13 @@ function App() {
 
       <main className="flex flex-col w-full relative z-10"> 
         
-        <Hero id="home"/> 
+        <Hero/> 
         
-        <div className="px-4 flex flex-col items-center gap-10">
-            {/* Nota: scroll-mt-24 ayuda a que al bajar, la navbar no tape el título */}
-            <section id="about" className="scroll-mt-24 h-screen w-full flex items-center justify-center border-4 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <h2 className="text-4xl font-bold font-grotesk">About Me</h2>
-            </section>
+        <div className="px-4 flex flex-col items-center gap-10 pb-32">
 
-            <section id="skills" className="scroll-mt-24 h-screen w-full flex items-center justify-center border-4 border-black bg-yellow-200 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-                <h2 className="text-4xl font-bold font-grotesk">Skills</h2>
-            </section>
+            <About />
+
+            <Skills />
 
             <section id="projects" className="scroll-mt-24 h-screen w-full flex items-center justify-center border-4 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
                 <h2 className="text-4xl font-bold font-grotesk">Projects</h2>
@@ -47,6 +46,8 @@ function App() {
         </div>
 
       </main>
+
+      <div className='relative z-20'> <Footer/> </div>
     </div>
   )
 }

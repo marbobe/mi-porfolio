@@ -1,7 +1,7 @@
 {
-  "welcome_title": "¡Hola Mundo!",
-  "welcome_text": "Este es mi primer componente estilo Neo-Brutalism.",
-  "button_click": "Púlsame", 
+   "generic": {
+    "title": "MAR_BOU"
+  }, 
   "nav": {
     "home": "Inicio",
     "about": "Sobre mí",
@@ -21,5 +21,41 @@
     ],
     "button_projects": "Ver Proyectos",
     "button_contact": "Contactar"
+  },
+  "about": {
+    "title": "SOBRE MÍ",
+    "p1": "Soy un desarrollador apasionado por crear experiencias web que no solo funcionen, sino que se sientan bien. Me especializo en el ecosistema JavaScript, pero siempre estoy explorando nuevas tecnologías.",
+    "p2": "Cuando no estoy programando, probablemente me encontrarás buscando el café perfecto o intentando arreglar bugs que yo mismo creé (es parte del proceso, ¿no?).",
+    "greeting": "¡Hola!",
+    "tags": {
+        "tag1": "Resolutiva",
+        "tag2": "Clean Code",
+        "tag3": "Pensamiento Crítico",
+        "tag4": "Trabajo en Equipo"
+    },
+    "button": "Descargar CV"
+  },
+  "skills": {
+    "title": "ARSENAL TÉCNICO",
+    "filters": {
+      "all": "Todo",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Base de Datos",
+      "tools": "Herramientas"
+    },
+    "certifications": {
+        "title": "CERTIFICACIONES & FORMACIÓN",
+        "status_progress": "En proceso",
+        "status_completed": "Completado",
+        "link": "Ver Credencial"
+    }
+  },
+  "footer": {
+    "text": "¿Tienes una idea?",
+    "cta": "HABLEMOS",
+    "rights": "Todos los derechos reservados.",
+    "created": "Creado con React, Tailwind & ",
+    "ingredients": [ "amor", "lágrimas" , "paciencia", "sudor"]
   }
 }

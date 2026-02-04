@@ -17,7 +17,7 @@ function Hero() {
       
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center gap-6">
         
-        <div className="inline-block bg-yellow-300 border-2 border-black px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg]">
+        <div className="inline-block bg-yellow-400 border-2 border-black px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg]">
              <span className="font-bold font-mono text-sm tracking-widest uppercase">
                 {t('hero.greeting')}
              </span>
