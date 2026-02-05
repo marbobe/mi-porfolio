@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 
 // AÑADIDO: SiTailwindcss
-import { FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub, FaDocker, FaBootstrap, FaExternalLinkAlt } from "react-icons/fa";
+import { FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub, FaDocker, FaBootstrap} from "react-icons/fa";
 import { SiJavascript, SiMysql, SiMongodb, SiSpringboot, SiExpress, SiLaravel, SiGraphql, SiHibernate, SiMongoose, SiGithubactions, SiTailwindcss } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 
@@ -50,7 +50,7 @@ function Skills(){
         link: "https://udemy.com" 
     },
     { 
-        name: "Java: Spring, SpringBoot, Hibernate & More", 
+        name: "Java: SpringBoot, Hibernate & More", 
         hours: "80h+", 
         status: "completed",
         link: "https://www.udemy.com/certificate/UC-a520d547-db21-42d6-aa57-78ff771af46c/"
@@ -59,7 +59,7 @@ function Skills(){
         name: "Node.js: Express, MongoDB & More", 
         hours: "40h", 
         status: "completed",
-        link: "https:/www.udemy.com/certificate/UC-1d7e5215-1614-4a20-91a2-d8c42461c903/" 
+        link: "https://www.udemy.com/certificate/UC-1d7e5215-1614-4a20-91a2-d8c42461c903/" 
     },
   ];
 
@@ -68,15 +68,15 @@ function Skills(){
 
 
   // Función auxiliar para obtener icono y color según el nombre del curso
-  const getCourseStyle = (name) => {
-    if (name.toLowerCase().includes('react')) return { icon: <FaReact />, color: 'text-cyan-600', bg: 'bg-cyan-100', border: 'border-cyan-600' };
-    if (name.toLowerCase().includes('java')) return { icon: <FaJava />, color: 'text-orange-600', bg: 'bg-orange-100', border: 'border-orange-600' };
-    if (name.toLowerCase().includes('node')) return { icon: <FaNodeJs />, color: 'text-green-600', bg: 'bg-green-100', border: 'border-green-600' };
-    return { icon: <FaExternalLinkAlt />, color: 'text-gray-600', bg: 'bg-gray-100', border: 'border-gray-600' };
+ const getCourseStyle = (name) => {
+    if (name.toLowerCase().includes('react')) return { icon: <FaReact />, color: 'text-cyan-600', hoverBg: 'group-hover:bg-cyan-200'};
+    if (name.toLowerCase().includes('java')) return { icon: <FaJava />, color: 'text-orange-600', hoverBg: 'group-hover:bg-orange-200'};
+    if (name.toLowerCase().includes('node')) return { icon: <FaNodeJs />, color: 'text-green-600', hoverBg: 'group-hover:bg-green-200'};
+    return { icon: <FaExternalLinkAlt />, color: 'text-gray-600', hoverBg: 'group-hover:bg-gray-200'}
   };
 
   return (
-    <section id="skills" className="w-full py-20 bg-yellow-200 border-4 border-black scroll-mt-24 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+    <section id="skills" className="w-full py-20 bg-yellow-100 border-4 border-black scroll-mt-24 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
         <div className="max-w-7xl mx-auto px-4">
              
              <div className="flex items-center gap-4 mb-10">
@@ -97,8 +97,8 @@ function Skills(){
                         className={`
                             px-4 py-1 font-mono font-bold uppercase text-base border-2 border-black transition-all
                             ${filter === cat 
-                                ? 'bg-black text-white shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] translate-y-1' 
-                                : 'bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white hover:shadow-[4px_4px_0px_0px_rgba(255,255,255,1)] hover:translate-y-1 '
+                                ? 'bg-black text-white shadow-[4px_4px_0px_0px_#8b5cf6] translate-y-1' 
+                                : 'bg-white text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white hover:shadow-[4px_4px_0px_0px_#8b5cf6] hover:translate-y-1 '
                             }
                         `}
                     >
@@ -120,7 +120,7 @@ function Skills(){
                             transition-all duration-200 group
                         "
                     >
-                        <div className="text-2xl group-hover:text-yellow-400 transition-colors">
+                        <div className="text-2xl transition-colors">
                             {skill.icon}
                         </div>
                         <span className="font-grotesk font-bold text-sm uppercase tracking-tighter">
@@ -140,18 +140,18 @@ function Skills(){
                     {courses.map((course, idx) => {
                         const style = getCourseStyle(course.name);
                         return (
-                            <div key={idx} className="relative bg-white border-4 border-black p-0 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-200">
+                            <div key={idx} className="group relative bg-white border-4 border-black p-0 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-200">
                                 {/* Cabecera de color */}
-                                <div className={`p-4 border-b-4 border-black ${style.bg} flex justify-between items-center`}>
+                                <div className={`p-4 border-b-4 border-black bg-white ${style.hoverBg} transition-colors duration-300 flex justify-between items-center`}>
                                     <div className={`text-3xl ${style.color}`}>{style.icon}</div>
                                     {/* Badge de estado */}
-                                    <span className={`text-xs font-bold px-2 py-1 border-2 border-black bg-white uppercase ${course.status === 'doing' ? 'text-yellow-600' : 'text-green-600'}`}>
+                                    <span className={`text-xs font-bold px-2 py-1 border-2 border-black bg-white uppercase`}>
                                         {course.status === 'doing' ? t('skills.certifications.status_progress') : t('skills.certifications.status_completed')}
                                     </span>
                                 </div>
                                 
                                 {/* Cuerpo */}
-                                <div className="p-4 flex flex-col h-[140px] justify-between">
+                                <div className="p-4 flex flex-col h-[100px] justify-between">
                                     <h4 className="font-bold font-grotesk text-xl leading-tight">{course.name}</h4>
                                     
                                     <div className="flex justify-between items-end border-t-2 border-dashed border-gray-300 pt-3">

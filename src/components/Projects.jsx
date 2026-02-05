@@ -1,8 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaExternalLinkAlt, FaFolderOpen } from 'react-icons/fa';
-
-// Imágenes Placeholder (Más adelante importarás tus capturas reales)
-// import project1 from '../assets/project1.jpg';
+import { FaGithub, FaExternalLinkAlt, FaFolderOpen, FaArrowUp } from 'react-icons/fa';
 
 function Projects() {
   const { t } = useTranslation();
@@ -67,54 +64,78 @@ function Projects() {
             <div className="flex-1 h-2 bg-black"></div> {/* Línea decorativa */}
         </div>
 
-        {/* ESTILO 1: ESTRUCTURA VERTICAL CLÁSICA */}
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {projectsData.map((project, index) => {
-        const content = getProjectContent(index, project.status);
-        return (
-            <div key={index} className="flex flex-col bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-4px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] transition-all duration-200">
-                {/* Imagen */}
-                <div className={`h-56 w-full border-b-4 border-black flex items-center justify-center overflow-hidden ${project.color}`}>
-                    {project.image ? (
-                        <img src={project.image} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all"/>
-                    ) : (
-                        <FaFolderOpen className="text-6xl opacity-20 text-black"/>
-                    )}
-                </div>
-
-                {/* Contenido */}
-                <div className="p-6 flex flex-col flex-1">
-                    {/* Título en caja negra */}
-                    <h3 className="bg-black text-white text-xl font-black font-grotesk uppercase p-2 -mt-10 mb-4 w-fit rotate-[-2deg]">
-                        {content.title}
-                    </h3>
-                    
-                    <div className="flex flex-wrap gap-2 mb-4">
-                        {content.tags.map((tag, i) => (
-                            <span key={i} className="text-xs font-mono font-bold border-2 border-black px-2 py-0.5 rounded-full">
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
-
-                    <p className="font-mono text-sm mb-6 leading-relaxed">
-                        {content.desc}
-                    </p>
-
-                    {/* Botones (Solo si no es coming soon) */}
-                    {project.status !== 'comingSoon' && (
-                        <div className="flex gap-3 mt-auto pt-4 border-t-2 border-dashed border-gray-300">
-                            <a href={project.repoUrl} target="_blank" className="hover:text-violet-600 transition-colors"><FaGithub size={24}/></a>
-                            {project.demoUrl && (
-                                <a href={project.demoUrl} target="_blank" className="hover:text-violet-600 transition-colors"><FaExternalLinkAlt size={22}/></a>
+        {/* TARJETAS */}
+        {/* TARJETAS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projectsData.map((project, index) => {
+                const content = getProjectContent(index, project.status);
+                return (
+                    // CAMBIO 1: 'group' para controlar el hover, 'relative' para posicionamiento, 
+                    // 'h-[450px]' altura fija obligatoria para que funcione el efecto.
+                    <div key={index} className="group relative h-[450px] border-4 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+                        
+                        {/* CAMBIO 2: La Imagen ahora es 'absolute inset-0' (ocupa todo el fondo) */}
+                        <div className={`absolute inset-0 w-full h-full flex items-center justify-center ${project.color} transition-transform duration-500 group-hover:scale-105`}>
+                            {project.image ? (
+                                <img src={project.image} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"/>
+                            ) : (
+                                <FaFolderOpen className="text-8xl opacity-20 text-black rotate-[-10deg] group-hover:rotate-0 transition-all"/>
                             )}
+                            
+                            {/* Overlay sutil para que el texto se lea mejor si la imagen es clara */}
+                            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                         </div>
-                    )}
-                </div>
-            </div>
-        );
-    })}
-</div>
+
+                        {/* CAMBIO 3: Contenedor Blanco Deslizante */}
+                        {/* Está posicionado 'absolute bottom-0'. Crece hacia arriba al hacer hover. */}
+                        <div className="absolute bottom-0 left-0 w-full bg-white border-t-4 border-black p-6 flex flex-col gap-4 transition-all duration-300 ease-in-out">
+                            
+                            {/* CABECERA (Siempre visible): Título y Tags */}
+                            <div className="flex flex-col gap-2">
+                                <div className="flex justify-between items-start">
+                                    <h3 className="text-2xl font-black font-grotesk uppercase leading-none">
+                                        {content.title}
+                                    </h3>
+                                    {/* Icono decorativo que invita a hacer hover */}
+                                    <FaArrowUp className="text-black transform rotate-45 group-hover:rotate-0 transition-transform duration-300" />
+                                </div>
+
+                                 <div className="flex flex-wrap gap-2">
+                                    {content.tags.map((tag, i) => (
+                                        <span key={i} className="text-xs font-mono font-bold  border-violet-800 text-violet-800 border-2 border-black px-2 py-0.5">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
+                                
+                            </div>
+
+                            {/* CUERPO OCULTO (Visible al hover): Descripción y Botones */}
+                            {/* Usamos max-h-0 y opacity-0 para esconderlo, y group-hover para mostrarlo */}
+                            <div className="max-h-0 opacity-0 group-hover:max-h-[300px] group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden flex flex-col gap-4">
+                                <p className="font-mono text-sm leading-relaxed border-t-2 border-dashed border-gray-300 pt-4">
+                                    {content.desc}
+                                </p>
+
+                                {project.status !== 'comingSoon' && (
+                                    <div className="flex gap-3">
+                                        <a href={project.repoUrl} target="_blank" className="flex-1 bg-black text-white font-bold font-mono text-center py-2 hover:bg-violet-600 transition-colors flex items-center justify-center gap-2">
+                                            <FaGithub /> Repo
+                                        </a>
+                                        {project.demoUrl && (
+                                            <a href={project.demoUrl} target="_blank" className="flex-1 bg-white text-black border-2 border-black font-bold font-mono text-center py-2 hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+                                                <FaExternalLinkAlt /> Demo
+                                            </a>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+
+                        </div>
+                    </div>
+                );
+            })}
+        </div>
       </div>
     </section>
   );
