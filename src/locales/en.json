@@ -55,6 +55,7 @@
     "title": "FEATURED PROJECTS",
     "btn_repo": "CODE",
     "btn_demo": "LIVE DEMO",
+    "warning_slow": "⚠️ Sleeping Server: May take 50s to wake up.",
     "list": [
       {
         "title": "BookTracker:",

@@ -55,6 +55,7 @@
     "title": "PROYECTOS DESTACADOS",
     "btn_repo": "CÓDIGO",
     "btn_demo": "VER WEB",
+    "warning_slow": "⚠️ Servidor en reposo: Puede tardar 50s en despertar.",
     "list": [
       {
         "title": "BookTracker:",

@@ -70,7 +70,6 @@ function Hero() {
             {t('hero.button_contact')}
           </a>
         </div>
-
       </div>
     </section>
   );

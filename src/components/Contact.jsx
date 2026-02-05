@@ -61,7 +61,7 @@ function Contact() {
             <div className="lg:col-span-4 flex flex-col gap-8 top-24">
                 <div className="lg:col-span-4 flex flex-col justify-between h-full py-4 sticky top-24">
                     
-                    {/* Greeting como Sticker rotado */}
+                    {/* Greeting */}
                     <div className="bg-violet-600 text-white mb-9 p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[-3deg] hover:rotate-0 transition-transform duration-300 cursor-default">
                         <h3 className="text-4xl font-black font-grotesk uppercase text-center leading-none">
                             {t('contact.greeting')}<br/>
@@ -97,7 +97,7 @@ function Contact() {
                 
                 <div className="bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8 md:p-12 relative">
                     
-                    {/* Decoración chincheta (Badge superior) */}
+                    {/* Decoración chincheta*/}
                     <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-black text-white px-6 py-2 font-mono font-bold uppercase rotate-[-2deg] shadow-[4px_4px_0px_0px_#8b5cf6]">
                         {t('contact.message_title')}
                     </div>

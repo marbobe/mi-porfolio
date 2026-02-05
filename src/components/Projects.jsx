@@ -14,7 +14,7 @@ function Projects() {
       color: "bg-violet-400",
       repoUrl: "https://github.com/marbobe/BookTracker",
       demoUrl: "https://booktracker-rtgy.onrender.com/",
-      status: "ready"
+      isSlow: true,
     },
     {
       id: 1,
@@ -22,7 +22,7 @@ function Projects() {
       color: "bg-pink-200",
       repoUrl: "https://github.com/marbobe/Gestion-productos-GraphQL",
       demoUrl: null, 
-      status: "ready"
+      isSlow: false,
     },
     {
       id: 2,
@@ -30,19 +30,11 @@ function Projects() {
       color: "bg-yellow-200",
       repoUrl: "https://github.com/marbobe/mi-porfolio",
       demoUrl: "#",
-      status: "ready" 
+      isSlow: false,
     }
   ];
 
-  const getProjectContent = (index, status) => {
-    if (status === 'comingSoon') {
-        return {
-            title: "WORK IN PROGRESS",
-            subtitle: "Cooming Soon",
-            desc: "Cooking the next big thing. Stay tuned.",
-            tags: ["Loading..."]
-        }
-    }
+  const getProjectContent = (index) => {
     return {
         title: t(`projects.list.${index}.title`),
         subtitle: t(`projects.list.${index}.subtitle`),
@@ -52,7 +44,7 @@ function Projects() {
   };
 
   return (
-    <section id="projects" className="w-full py-20 bg-white border-4 border-black scroll-mt-24 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+    <section id="projects" className="w-full py-20 bg-violet-100 border-4 border-black scroll-mt-24 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
       <div className="max-w-7xl mx-auto px-4">
         
         {/* TÍTULO */}
@@ -67,7 +59,7 @@ function Projects() {
         {/* TARJETAS */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectsData.map((project, index) => {
-                const content = getProjectContent(index, project.status);
+                const content = getProjectContent(index);
                 return (
                     <div key={index} className="group relative h-[450px] border-4 border-black bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
                         
@@ -90,7 +82,6 @@ function Projects() {
                                     <h3 className="text-2xl font-black font-grotesk uppercase leading-none">
                                         {content.title}
                                     </h3>
-                                    {/* Icono decorativo que invita a hacer hover */}
                                     <FaArrowUp className="text-black transform rotate-45 group-hover:rotate-0 transition-transform duration-300" />
                                 </div>
                                  <h4 className="font-bold font-mono text-xs text-gray-600 uppercase mt-1">
@@ -111,21 +102,34 @@ function Projects() {
                                 <p className="font-mono text-sm leading-relaxed border-t-2 border-dashed border-gray-300 pt-4">
                                     {content.desc}
                                 </p>
-
-                                {project.status !== 'comingSoon' && (
-                                    <div className="flex gap-3">
-                                        <a href={project.repoUrl} target="_blank" className="flex-1 bg-black text-white font-bold font-mono text-center py-2 hover:bg-violet-600 transition-colors flex items-center justify-center gap-2">
-                                            <FaGithub /> Repo
+ 
+                                <div className="flex gap-3">
+                                    <a href={project.repoUrl} target="_blank" className="flex-1 bg-black text-white font-bold font-mono text-center py-2 hover:bg-violet-600 transition-colors flex items-center justify-center gap-2">
+                                        <FaGithub /> Repo
+                                    </a>
+                                    {project.demoUrl && (
+                                        <div className="relative flex-1 group/btn"> {/* Wrapper relativo para posicionar el tooltip */}
+                                            
+                                            {/* El Tooltip (Solo si es isSlow (Servidor Render)) */}
+                                            {project.isSlow && (
+                                                <div className="absolute bottom-full right-0 mb-3 w-48 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
+                                                    
+                                                    {/* Caja del mensaje */}
+                                                    <div className="bg-yellow-300 border-2 border-black p-2 text-[10px] leading-tight font-bold font-mono text-center shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                                                        {t('projects.warning_slow')}
+                                                    </div>
+                                                    
+                                                    {/* Triangulito decorativo (Flecha abajo) */}
+                                                    <div className="absolute -bottom-1.5 right-1/2 translate-x-1/2 left-1/2 -translate-x-1/2 w-3 h-3 bg-yellow-300 border-b-2 border-r-2 border-black rotate-45"></div>
+                                                </div>
+                                            )}
+                                        <a href={project.demoUrl} target="_blank" className="flex-1 bg-white text-black border-2 border-black font-bold font-mono text-center py-2 hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
+                                            <FaExternalLinkAlt /> Demo
                                         </a>
-                                        {project.demoUrl && (
-                                            <a href={project.demoUrl} target="_blank" className="flex-1 bg-white text-black border-2 border-black font-bold font-mono text-center py-2 hover:bg-gray-200 transition-colors flex items-center justify-center gap-2">
-                                                <FaExternalLinkAlt /> Demo
-                                            </a>
-                                        )}
-                                    </div>
-                                )}
+                                        </div>
+                                    )}
+                                </div>
                             </div>
-
                         </div>
                     </div>
                 );

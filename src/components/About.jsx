@@ -14,7 +14,7 @@ function About(){
     ];
 
     return(
-        <section id="about" className="w-full py-20 bg-white border-4 border-black scroll-mt-24 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+        <section id="about" className="w-full py-20 bg-gray-100 border-4 border-black scroll-mt-24 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
       
       <div className="max-w-7xl mx-auto px-4">
         
@@ -38,7 +38,7 @@ function About(){
                 <div className="relative z-10 border-4 border-black bg-white p-2">
                     
                     {/* FOTO*/}
-                    <div className="aspect-square bg-gray-200 overflow-hidden border-2 border-black transition-all duration-500">
+                    <div className="object-cover object-top aspect-square bg-gray-200 overflow-hidden border-2 border-black transition-all duration-500">
                         <img src={profilePic}/>
                         <div className="absolute bottom-4 right-4 bg-white border-2 border-black px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                             {/*Bocadillo*/}

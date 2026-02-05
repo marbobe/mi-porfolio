@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 
-// AÑADIDO: SiTailwindcss
 import { FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub, FaDocker, FaBootstrap} from "react-icons/fa";
 import { SiJavascript, SiMysql, SiMongodb, SiSpringboot, SiExpress, SiLaravel, SiGraphql, SiHibernate, SiMongoose, SiGithubactions, SiTailwindcss } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
