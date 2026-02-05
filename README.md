@@ -12,7 +12,7 @@
 
 ## Live Demo
 Puedes ver el proyecto desplegado aquí:
- **[[https://marbou.vercel.app/]]**
+ **https://marbou.vercel.app/**
 
 ---
 
@@ -34,4 +34,6 @@ Puedes ver el proyecto desplegado aquí:
 * **Traducción:** i18next & react-i18next
 * **Formularios:** EmailJS
 * **Animaciones:** CSS Transitions & Keyframes personalizadas
+
+
 
