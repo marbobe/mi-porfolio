@@ -82,9 +82,9 @@ function Contact() {
                             <div className="h-0.5 bg-black flex-1"></div>
                         </div>
                         <div className="flex gap-4">
-                            <a href="#" className="hover:text-blue-700 transition-colors"><FaLinkedin size={36}/></a>
-                            <a href="#" className="hover:text-gray-700 transition-colors"><FaGithub size={36}/></a>
-                            <a href="#" className="hover:text-pink-400 transition-colors"><FaEnvelope size={36}/></a>
+                            <a href="https://www.linkedin.com/in/marboubernad/" className="hover:text-blue-700 transition-colors"><FaLinkedin size={36}/></a>
+                            <a href="https://github.com/marbobe" className="hover:text-gray-700 transition-colors"><FaGithub size={36}/></a>
+                            <a href="marboubernad@gmail.com" className="hover:text-pink-400 transition-colors"><FaEnvelope size={36}/></a>
                         </div>
                     </div>
 

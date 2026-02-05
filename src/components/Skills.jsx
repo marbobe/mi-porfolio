@@ -150,7 +150,7 @@ function Skills(){
                                 </div>
                                 
                                 {/* Cuerpo */}
-                                <div className="p-4 flex flex-col h-[100px] justify-between">
+                                <div className="p-4 flex flex-col min-h-[110px] justify-between">
                                     <h4 className="font-bold font-grotesk text-xl leading-tight">{course.name}</h4>
                                     
                                     <div className="flex justify-between items-end border-t-2 border-dashed border-gray-300 pt-3">

@@ -30,7 +30,7 @@ function Footer() {
         <div className="flex gap-4">
             {/* GITHUB */}
             <a 
-                href="https://github.com/TU_USUARIO" 
+                href="https://github.com/marbobe" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-white text-black p-3 border-2 border-white hover:bg-yellow-400 hover:border-yellow-400 hover:translate-y-[-4px] transition-all shadow-[4px_4px_0px_0px_#8b5cf6]" // Sombra violeta
@@ -41,7 +41,7 @@ function Footer() {
 
             {/* LINKEDIN */}
             <a 
-                href="https://linkedin.com/in/TU_USUARIO" 
+                href="https://www.linkedin.com/in/marboubernad/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-white text-black p-3 border-2 border-white hover:bg-blue-500 hover:text-white hover:border-blue-500 hover:translate-y-[-4px] transition-all shadow-[4px_4px_0px_0px_#8b5cf6]"
@@ -52,7 +52,7 @@ function Footer() {
 
             {/* MAIL */}
             <a 
-                href="mailto:tucorreo@ejemplo.com" 
+                href="marboubernad@gmail.com" 
                 className="bg-white text-black p-3 border-2 border-white hover:bg-pink-400 hover:border-pink-400 hover:translate-y-[-4px] transition-all shadow-[4px_4px_0px_0px_#8b5cf6]"
                 aria-label="Email"
             >
