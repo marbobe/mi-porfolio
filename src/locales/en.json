@@ -14,18 +14,18 @@
     "name": "MAR BOU",
     "roles": [
       "Full-Stack Developer",
-      "Software Engineer",
+      "Problem Solver",
       "Web Developer",
-      "Frontend Specialist",
-      "React Enthusiast"
+      "Backend Specialist",
+      "Pixel Perfectionist"
     ],
     "button_projects": "View Projects",
     "button_contact": "Contact Me"
   },
   "about": {
     "title": "ABOUT ME",
-    "p1": "I am a developer passionate about building web experiences that not only work but feel great. I specialize in the JavaScript ecosystem, but I'm always exploring new technologies.",
-    "p2": "When I'm not coding, you'll probably find me hunting for the perfect coffee or trying to fix bugs I created myself (it's part of the process, right?).",
+    "p1": "Full Stack Developer with a Backend soul. I am currently in the final semester of my Web Application Development degree at UOC. My background allows me to build solid, scalable architectures, always prioritizing clean code.",
+    "p2": "I used to craft prosthetics with millimeter precision. Now, I apply that same obsession for detail to my code. If I can troubleshoot a myoelectric prosthesis, I can certainly fix that bug that’s been breaking production.",
     "greeting": "Hi!",
     "tags": {
         "tag1": "Problem Solver",
@@ -57,19 +57,22 @@
     "btn_demo": "LIVE DEMO",
     "list": [
       {
-        "title": "E-Commerce Dashboard",
-        "desc": "Full admin dashboard with charts, user management, and dark mode toggle.",
-        "tags": ["React", "Tailwind", "ChartJS"]
+        "title": "BookTracker:",
+        "subtitle": "Reading Tracking System",
+        "desc": "Cloud-deployed book tracking system. Includes a 'Demo' mode for visitors and advanced filtering.",
+        "tags": ["Java", "SpringBoot", "Thymeleaf", "PostgreSQL"]
       },
       {
-        "title": "Task Manager API",
-        "desc": "Robust backend for task management with JWT authentication and Mongo database.",
-        "tags": ["Node.js", "Express", "MongoDB"]
+        "title": "GraphQL API",
+        "subtitle": "Product Management",
+        "desc": "A robust, modular, and scalable API designed with layered architecture, SOLID principles, and DevOps best practices.",
+        "tags": ["Node.js", "Express", "GraphQL", "MongoDB", "Docker"]
       },
       {
         "title": "Personal Portfolio",
+        "subtitle": "Interactive Showcase",
         "desc": "This very website. Neo-Brutalism design, i18n support, and functional forms.",
-        "tags": ["React", "i18next", "EmailJS"]
+        "tags": ["React", "Tailwind", "i18next", "EmailJS"]
       }
     ]
   },

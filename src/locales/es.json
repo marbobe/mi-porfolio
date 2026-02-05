@@ -13,19 +13,19 @@
     "greeting": "Hola, soy",
     "name": "MAR BOU",
     "roles": [
-      "Desarrollador Full-Stack",
-      "Ingeniero de Software",
-      "Desarrollador Web",
-      "Especialista Frontend",
-      "Apasionado por React"
+      "Desarrolladora Full-Stack",
+      "Solucionadora de Problemas",
+      "Desarrolladora Web",
+      "Especialista Backend",
+      "Perfeccionista del Pixel"
     ],
     "button_projects": "Ver Proyectos",
     "button_contact": "Contactar"
   },
   "about": {
     "title": "SOBRE MÍ",
-    "p1": "Soy un desarrollador apasionado por crear experiencias web que no solo funcionen, sino que se sientan bien. Me especializo en el ecosistema JavaScript, pero siempre estoy explorando nuevas tecnologías.",
-    "p2": "Cuando no estoy programando, probablemente me encontrarás buscando el café perfecto o intentando arreglar bugs que yo mismo creé (es parte del proceso, ¿no?).",
+    "p1": "Desarrolladora Full Stack con alma de Backend. Actualmente curso el último semestre de Desarrollo de Aplicaciones Web en la UOC. Mi formación me permite construir arquitecturas sólidas y escalables, priorizando siempre el código limpio.",
+    "p2": "Antes fabricaba prótesis con precisión milimétrica; ahora aplico esa misma obsesión por el detalle al código. Si soy capaz de calibrar una prótesis mioeléctrica, puedo arreglar ese bug que lleva dos días molestando en producción.",
     "greeting": "¡Hola!",
     "tags": {
         "tag1": "Resolutiva",
@@ -57,19 +57,22 @@
     "btn_demo": "VER WEB",
     "list": [
       {
-        "title": "E-Commerce Dashboard",
-        "desc": "Panel de administración completo con gráficos, gestión de usuarios y modo oscuro.",
-        "tags": ["React", "Tailwind", "ChartJS"]
+        "title": "BookTracker:",
+        "subtitle": " Sistema de contorl de lectura",
+        "desc": "Sistema de seguimiento de libros desplegado en la nube. Incluye modo 'Demo' para visitantes y filtrado avanzado.",
+        "tags": ["Java", "SpringBoot", "Thymeleaf", "PostgreSQL"]
       },
       {
-        "title": "Task Manager API",
-        "desc": "Backend robusto para gestión de tareas con autenticación JWT y base de datos Mongo.",
-        "tags": ["Node.js", "Express", "MongoDB"]
+        "title": "API GraphQL",
+        "subtitle": "Gestión de Productos",
+        "desc": "Una API robusta, modular y escalable diseñada con arquitectura por capas, principios SOLID y buenas prácticas de DevOps.",
+        "tags": ["Node.js", "Express", "GraphQL", "MongoDB", "Docker"]
       },
       {
         "title": "Portfolio Personal",
+        "subtitle": "Escaparate Interactivo",
         "desc": "Este mismo sitio web. Diseño Neo-Brutalism, internacionalización y formulario funcional.",
-        "tags": ["React", "i18next", "EmailJS"]
+        "tags": ["React", "Tailwind", "i18next", "EmailJS"]
       }
     ]
   },

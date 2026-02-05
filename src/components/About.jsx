@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import profilePic from '../assets/perfil.jpg';
-import { FaFileDownload, FaArrowRight } from "react-icons/fa";
+import { FaFileDownload } from "react-icons/fa";
 
 function About(){
     const { t , i18n } = useTranslation();
