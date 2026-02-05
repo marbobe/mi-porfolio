@@ -41,7 +41,7 @@ function Footer() {
 
             {/* LINKEDIN */}
             <a 
-                href="https://www.linkedin.com/in/marboubernad/" 
+                href="mailto:https://www.linkedin.com/in/marboubernad/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-white text-black p-3 border-2 border-white hover:bg-blue-500 hover:text-white hover:border-blue-500 hover:translate-y-[-4px] transition-all shadow-[4px_4px_0px_0px_#8b5cf6]"
