@@ -70,10 +70,10 @@
         "tags": ["Node.js", "Express", "GraphQL", "MongoDB", "Docker"]
       },
       {
-        "title": "Portfolio Personal",
-        "subtitle": "Escaparate Interactivo",
-        "desc": "Este mismo sitio web. Diseño Neo-Brutalism, internacionalización y formulario funcional.",
-        "tags": ["React", "Tailwind", "i18next", "EmailJS"]
+        "title": "RestaurIAnte",
+        "subtitle": "Recomendador Gastronómico con IA",
+        "desc": "Aplicación inteligente que genera recomendaciones personalizadas de restaurantes en tiempo real mediante el modelo Gemini-3-Flash. Incluye diseño Glassmorphism, lógica Serverless y geolocalización dinámica.",
+        "tags": ["Next.js", "React", "Tailwind CSS", "Google Gemini AI"]
       }
     ]
   },

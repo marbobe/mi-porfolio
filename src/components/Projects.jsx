@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FaGithub, FaExternalLinkAlt, FaFolderOpen, FaArrowUp } from 'react-icons/fa';
 import bookTracker from '../assets/BookTracker.png';
 import graphqlImg from '../assets/graphql.png';
-import porfolio from '../assets/porfolio.png';
+import restauriante from '../assets/restauriante.png';
 
 function Projects() {
   const { t } = useTranslation();
@@ -26,10 +26,10 @@ function Projects() {
     },
     {
       id: 2,
-      image: porfolio,
-      color: "bg-yellow-200",
-      repoUrl: "https://github.com/marbobe/mi-porfolio",
-      demoUrl: "#",
+      image: restauriante,
+      color: "<bg-emerald-3></bg-emerald-3>00",
+      repoUrl: "https://github.com/marbobe/ai-restaurante",
+      demoUrl: "https://restauriante.vercel.app/",
       isSlow: false,
     }
   ];

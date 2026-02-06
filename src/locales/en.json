@@ -70,10 +70,10 @@
         "tags": ["Node.js", "Express", "GraphQL", "MongoDB", "Docker"]
       },
       {
-        "title": "Personal Portfolio",
-        "subtitle": "Interactive Showcase",
-        "desc": "This very website. Neo-Brutalism design, i18n support, and functional forms.",
-        "tags": ["React", "Tailwind", "i18next", "EmailJS"]
+        "title": "RestaurIAnte",
+        "subtitle": "AI-Powered Restaurant Recommender",
+        "desc": "Smart application that generates personalized real-time restaurant recommendations using the Gemini-3-Flash model. Features Glassmorphism design, Serverless logic, and dynamic geolocation linking.",
+        "tags": ["Next.js", "React", "Tailwind CSS", "Google Gemini AI", "Vercel"]
       }
     ]
   },
