@@ -72,7 +72,7 @@
       {
         "title": "RestaurIAnte",
         "subtitle": "Recomendador Gastronómico con IA",
-        "desc": "Aplicación inteligente que genera recomendaciones personalizadas de restaurantes en tiempo real mediante el modelo Gemini-3-Flash. Incluye diseño Glassmorphism, lógica Serverless y geolocalización dinámica.",
+        "desc": "Aplicación inteligente que genera recomendaciones personalizadas de restaurantes en tiempo real mediante el modelo Gemini-2.5-Flash.",
         "tags": ["Next.js", "React", "Tailwind CSS", "Google Gemini AI"]
       }
     ]

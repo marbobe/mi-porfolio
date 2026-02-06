@@ -72,8 +72,8 @@
       {
         "title": "RestaurIAnte",
         "subtitle": "AI-Powered Restaurant Recommender",
-        "desc": "Smart application that generates personalized real-time restaurant recommendations using the Gemini-3-Flash model. Features Glassmorphism design, Serverless logic, and dynamic geolocation linking.",
-        "tags": ["Next.js", "React", "Tailwind CSS", "Google Gemini AI", "Vercel"]
+        "desc": "Smart application that generates personalized real-time restaurant recommendations using the Gemini-2.5-Flash model.",
+        "tags": ["Next.js", "React", "Tailwind CSS", "Google Gemini AI"]
       }
     ]
   },
