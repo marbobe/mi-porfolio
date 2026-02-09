@@ -90,7 +90,13 @@
     "message_title": "Message me",
     "send_btn": "SEND MESSAGE",
     "socials": "FIND ME ON",
-    "greeting": "LET'S WORK TOGETHER."
+    "greeting": "LET'S WORK TOGETHER.",
+    "success_title": "MESSAGE SENT!",
+    "success_desc": "Thanks for reaching out. I'll get back to you as soon as possible.",
+    "error_title": "SENDING ERROR",
+    "error_desc": "There was a technical issue. Please try again later.",
+    "captcha_title": "VERIFICATION REQUIRED",
+    "captcha_desc": "Please check the captcha box to continue."
   },
   "footer": {
     "text": "Have an idea?",

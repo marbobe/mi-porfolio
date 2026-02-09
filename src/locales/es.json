@@ -89,7 +89,13 @@
     "message_title": "Escríbeme",
     "send_btn": "ENVIAR MENSAJE",
     "socials": "ENCUÉNTRAME EN",
-    "greeting": "TRABAJEMOS JUNTOS."
+    "greeting": "TRABAJEMOS JUNTOS.",
+    "success_title": "¡MENSAJE ENVIADO!",
+    "success_desc": "Gracias por contactarme. Te responderé lo antes posible.",
+    "error_title": "ERROR DE ENVÍO",
+    "error_desc": "Hubo un problema técnico. Por favor, inténtalo más tarde.",
+    "captcha_title": "VERIFICACIÓN REQUERIDA",
+    "captcha_desc": "Marca la casilla del captcha para continuar."
  
   },
   "footer": {

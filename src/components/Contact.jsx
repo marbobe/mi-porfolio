@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaLinkedin, FaPaperPlane, FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaPaperPlane} from 'react-icons/fa';
 import { useRef , useState , useEffect} from 'react';
+import Notification from './Notification';
 import emailjs from '@emailjs/browser';
 import SectionTitle from './SectionTitle';
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -29,8 +30,7 @@ function Contact() {
     const token = captchaRef.current.getValue();
 
     if(!token) {
-        setFeedback('error');
-        console.log('Error de verificaicón del recaptcha, se debe verificar que no es un robot');
+        setFeedback('captcha');
         return;
     }
 
@@ -70,7 +70,7 @@ function Contact() {
                 <div className="lg:col-span-4 flex flex-col justify-between h-full py-4 sticky top-24">
                     
                     {/* Greeting */}
-                    <div className="bg-violet-600 text-white mb-9 p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[-3deg] hover:rotate-0 transition-transform duration-300 cursor-default">
+                    <div className="bg-violet-600 text-white mb-16 p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] rotate-[-3deg] hover:rotate-0 transition-transform duration-300 cursor-default">
                         <h3 className="text-4xl font-black font-grotesk uppercase text-center leading-none">
                             {t('contact.greeting')}<br/>
                         </h3>
@@ -84,14 +84,27 @@ function Contact() {
                         </p>
                     </div>
 
-                    <div className="mt-20">
+                    <div className=" mt-12 lg:mt-20">
                         <div className="flex gap-4 items-center mb-4">
                             <span className="font-mono text-sm uppercase font-bold bg-white px-2 border-2 border-black">{t('contact.socials')}</span>
                             <div className="h-0.5 bg-black flex-1"></div>
                         </div>
                         <div className="flex gap-4">
-                            <a href="https://www.linkedin.com/in/marboubernad/" className="hover:text-blue-700 transition-colors"><FaLinkedin size={36}/></a>
-                            <a href="https://github.com/marbobe" className="hover:text-gray-700 transition-colors"><FaGithub size={36}/></a>
+                            <a 
+                                href="https://www.linkedin.com/in/marboubernad/" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                aria-label="LinkedIn"
+                                className="hover:text-blue-700 transition-colors"
+                            ><FaLinkedin size={36}/></a>
+
+                            <a 
+                                href="https://github.com/marbobe" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                aria-label="GitHub"
+                                className="hover:text-gray-700 transition-colors"
+                            ><FaGithub size={36}/></a>
                         </div>
                     </div>
 
@@ -140,7 +153,7 @@ function Contact() {
                              <label htmlFor='message' className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.message_label')}</label>
                              <textarea 
                                 id='message'
-                                rows="5" 
+                                rows="3" 
                                 name="message" 
                                 required
                                 disabled={isSending}
@@ -148,11 +161,13 @@ function Contact() {
                              ></textarea>
                         </div>
 
-                        <div className='mb-4'>
-                            <ReCAPTCHA 
-                                ref={captchaRef} 
-                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                            />
+                        <div className="w-full flex justify-center md:justify-end">
+                            <div className="transform scale-75 sm:scale-100 transition-transform">
+                                <ReCAPTCHA
+                                    ref={captchaRef}
+                                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                                />
+                            </div>
 
                         </div>
                         
@@ -177,30 +192,8 @@ function Contact() {
         </div>
       </div>
 
-      {/* --- NOTIFICACIÓN TOAST PERSONALIZADA --- */}
-      {/* Se renderiza condicionalmente si feedback existe */}
-      {feedback && (
-          <div className={`
-            fixed bottom-4 right-4 z-50 flex items-center gap-4 p-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] animate-bounce-in
-            ${feedback === 'success' ? 'bg-green-400' : 'bg-red-400'}
-          `}>
-            <div className="bg-white p-2 border-2 border-black rounded-full">
-                {feedback === 'success' ? <FaCheckCircle size={24}/> : <FaExclamationTriangle size={24}/>}
-            </div>
-            <div>
-                <h4 className="font-black font-grotesk uppercase text-xl">
-                    {feedback === 'success' ? 'SUCCESS!' : 'ERROR!'}
-                </h4>
-                <p className="font-mono font-bold text-sm">
-                    {feedback === 'success' 
-                        ? 'Message sent successfully.' 
-                        : 'Something went wrong.'}
-                </p>
-            </div>
-            {/* Botón de cerrar manual */}
-            <button onClick={() => setFeedback(null)} className="ml-4 font-black hover:scale-125 transition-transform">X</button>
-          </div>
-      )}
+      {/* --- NOTIFICACIÓN según feedback --- */}
+    <Notification status={feedback} onClose={()=> setFeedback(null)} t={t} />
     </section>
   );
 }
