@@ -3,6 +3,7 @@ import { FaGithub, FaExternalLinkAlt, FaFolderOpen, FaArrowUp } from 'react-icon
 import bookTracker from '../assets/BookTracker.png';
 import graphqlImg from '../assets/graphql.png';
 import restauriante from '../assets/restauriante.png';
+import SectionTitle from './SectionTitle';
 
 function Projects() {
   const { t } = useTranslation();
@@ -27,7 +28,7 @@ function Projects() {
     {
       id: 2,
       image: restauriante,
-      color: "<bg-emerald-3></bg-emerald-3>00",
+      color: "bg-emerald-300",
       repoUrl: "https://github.com/marbobe/ai-restaurante",
       demoUrl: "https://restauriante.vercel.app/",
       isSlow: false,
@@ -39,7 +40,8 @@ function Projects() {
         title: t(`projects.list.${index}.title`),
         subtitle: t(`projects.list.${index}.subtitle`),
         desc: t(`projects.list.${index}.desc`),
-        tags: t(`projects.list.${index}.tags`, { returnObjects: true })
+        tags: t(`projects.list.${index}.tags`, { returnObjects: true }),
+        altText: t(`projects.list.${index}.alt_img`)
     };
   };
 
@@ -48,13 +50,7 @@ function Projects() {
       <div className="max-w-7xl mx-auto px-4">
         
         {/* TÍTULO */}
-        <div className="flex items-center gap-4 mb-16">
-            <div className="w-8 h-8 bg-black"></div> {/* Cuadrado decorativo */}
-            <h2 className="text-5xl md:text-6xl font-black font-grotesk uppercase">
-                {t('projects.title')}
-            </h2>
-            <div className="flex-1 h-2 bg-black"></div> {/* Línea decorativa */}
-        </div>
+        <SectionTitle title={t('projects.title')}/>
 
         {/* TARJETAS */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -66,7 +62,7 @@ function Projects() {
                         {/* imagen */}
                         <div className={`absolute inset-0 z-0 w-full h-full ${project.color} transition-transform duration-500 group-hover:scale-105`}>
                             {project.image ? (
-                                <img src={project.image} className="w-full h-full object-cover object-top transition-all duration-500"/>
+                                <img src={project.image} alt={content.altText} className="w-full h-full object-cover object-top transition-all duration-500"/>
                             ) : (
                                 <FaFolderOpen className="text-8xl opacity-20 text-black rotate-[-10deg] group-hover:rotate-0 transition-all"/>
                             )}

@@ -46,7 +46,7 @@ function Navbar(){
             </div>
 
             {/* MENU DESKTOP */}
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
                 <div className="ml-10 flex items-baseline space-x-8">
                 {navLinks.map((link) => {
                     const isActive = activeId === link.id && link.id !== 'home';
@@ -87,7 +87,7 @@ function Navbar(){
             </div>
 
             {/* BOTÓN HAMBURGUESA*/}
-            <div className="md:hidden">
+            <div className="lg:hidden">
                 <button 
                     onClick={() => setIsOpen(!isOpen)}
                     className="text-2xl focus:outline-none border-2 border-transparent p-1 hover:border-black transition-all"

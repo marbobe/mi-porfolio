@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import profilePic from '../assets/perfil.jpg';
 import { FaFileDownload } from "react-icons/fa";
+import SectionTitle from "./SectionTitle";
 
 function About(){
     const { t , i18n } = useTranslation();
@@ -14,32 +15,25 @@ function About(){
     ];
 
     return(
-        <section id="about" className="w-full py-20 bg-gray-100 border-4 border-black scroll-mt-24 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
+    <section id="about" className="w-full py-20 bg-gray-100 border-4 border-black scroll-mt-24 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
       
       <div className="max-w-7xl mx-auto px-4">
         
-        {/* TÍTULO DE LA SECCIÓN con decoración */}
-        <div className="flex items-center gap-4 mb-16">
-            <div className="w-8 h-8 bg-black"></div>  {/* Cuadrado decorativo */}
-            <h2 className="text-5xl md:text-6xl font-black font-grotesk uppercase">
-                {t('about.title')}
-            </h2>
-            <div className="flex-1 h-2 bg-black"></div> {/* Línea decorativa */}
-        </div>
+        <SectionTitle title={t('about.title')}/>
 
         {/* CONTENIDO: GRID DE 2 COLUMNAS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             
             {/* COLUMNA 1: LA FOTO*/}
-            <div className="relative group">
+            <div className="relative group w-[90%] max-w-sm mx-auto md:max-w-none md:mx-0">
                 <div className="absolute top-4 left-4 w-full h-full bg-black z-0 transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
                 
                 {/* Tarjeta Principal */}
                 <div className="relative z-10 border-4 border-black bg-white p-2">
                     
                     {/* FOTO*/}
-                    <div className="object-cover object-top aspect-square bg-gray-200 overflow-hidden border-2 border-black transition-all duration-500">
-                        <img src={profilePic}/>
+                    <div className="relative aspect-square bg-gray-200 overflow-hidden border-2 border-black transition-all duration-500">
+                        <img src={profilePic} className="w-full h-full object-cover object-top" alt="Profile"/>
                         <div className="absolute bottom-4 right-4 bg-white border-2 border-black px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                             {/*Bocadillo*/}
                             <span className="font-black font-grotesk text-xl uppercase">{t('about.greeting')}</span>

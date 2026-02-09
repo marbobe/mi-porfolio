@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub, FaDocker, FaBootstrap} from "react-icons/fa";
 import { SiJavascript, SiMysql, SiMongodb, SiSpringboot, SiExpress, SiLaravel, SiGraphql, SiHibernate, SiMongoose, SiGithubactions, SiTailwindcss } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
+import SectionTitle from "./SectionTitle";
 
 function Skills(){
     const {t} = useTranslation();
@@ -78,13 +79,7 @@ function Skills(){
     <section id="skills" className="w-full py-20 bg-yellow-100 border-4 border-black scroll-mt-24 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
         <div className="max-w-7xl mx-auto px-4">
              
-             <div className="flex items-center gap-4 mb-10">
-                <div className="w-8 h-8 bg-black"></div>  {/* Cuadrado decorativo */}
-                <h2 className="text-5xl md:text-6xl font-black font-grotesk uppercase text-center md:text-left">
-                {t('skills.title')}
-                </h2>
-                <div className="flex-1 h-2 bg-black"></div> {/* Línea decorativa */}
-             </div>
+            <SectionTitle title={t('skills.title')}/>
             
 
             {/* FILTROS */}

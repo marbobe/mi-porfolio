@@ -15,7 +15,7 @@ function Hero() {
       className="relative mt-20 min-h-[calc(100vh-5rem)] w-full flex flex-col items-center justify-center bg-transparent text-black overflow-hidden"
     >
       
-      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center gap-6">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 text-center flex flex-col items-center gap-6 mt-8">
         
         <div className="inline-block bg-yellow-400 border-2 border-black px-4 py-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-[-2deg]">
              <span className="font-bold font-mono text-sm tracking-widest uppercase">
@@ -41,7 +41,7 @@ function Hero() {
             </span>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-6 mt-8">
+        <div className="flex flex-col sm:flex-row gap-6 mt-8 mb-8">
           <a 
             href="#projects"
             className="

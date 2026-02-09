@@ -61,19 +61,23 @@
         "title": "BookTracker:",
         "subtitle": "Reading Tracking System",
         "desc": "Cloud-deployed book tracking system. Includes a 'Demo' mode for visitors and advanced filtering.",
-        "tags": ["Java", "SpringBoot", "Thymeleaf", "PostgreSQL"]
+        "tags": ["Java", "SpringBoot", "Thymeleaf", "PostgreSQL"],
+        
+        "alt_img": "BookTracker project cover"
       },
       {
         "title": "GraphQL API",
         "subtitle": "Product Management",
         "desc": "A robust, modular, and scalable API designed with layered architecture, SOLID principles, and DevOps best practices.",
-        "tags": ["Node.js", "Express", "GraphQL", "MongoDB", "Docker"]
+        "tags": ["Node.js", "Express", "GraphQL", "MongoDB", "Docker"],
+        "alt_img": "GraphQL logo"
       },
       {
         "title": "RestaurIAnte",
         "subtitle": "AI-Powered Restaurant Recommender",
         "desc": "Smart application that generates personalized real-time restaurant recommendations using the Gemini-2.5-Flash model.",
-        "tags": ["Next.js", "React", "Tailwind CSS", "Google Gemini AI"]
+        "tags": ["Next.js", "React", "Tailwind CSS", "Google Gemini AI"],
+        "alt_img": "RestaurIAnte project restaurant search menu"
       }
     ]
   },

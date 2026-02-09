@@ -50,14 +50,6 @@ function Footer() {
                 <FaLinkedin size={30} />
             </a>
 
-            {/* MAIL */}
-            <a 
-                href="marboubernad@gmail.com" 
-                className="bg-white text-black p-3 border-2 border-white hover:bg-pink-400 hover:border-pink-400 hover:translate-y-[-4px] transition-all shadow-[4px_4px_0px_0px_#8b5cf6]"
-                aria-label="Email"
-            >
-                <FaEnvelope size={30} />
-            </a>
         </div>
       </div>
 

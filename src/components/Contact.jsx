@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { FaGithub, FaLinkedin, FaPaperPlane, FaEnvelope, FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa';
 import { useRef , useState , useEffect} from 'react';
 import emailjs from '@emailjs/browser';
+import SectionTitle from './SectionTitle';
 
 function Contact() {
   const { t } = useTranslation();
@@ -44,14 +45,7 @@ function Contact() {
       <div className="max-w-6xl mx-auto px-4">
 
          {/* TÍTULO DE LA SECCIÓN con decoración */}
-        <div className="flex items-center gap-4 mb-16">
-            <div className="w-8 h-8 bg-black"></div>  {/* Cuadrado decorativo */}
-            <h2 className="text-5xl md:text-6xl font-black font-grotesk uppercase">
-                {t('contact.title')}
-            </h2>
-            <div className="flex-1 h-2 bg-black"></div> {/* Línea decorativa */}
-
-        </div>
+        <SectionTitle title={t('contact.title')}/>
         
         {/* ESTRUCTURA GRID: 12 columnas en total */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
@@ -84,7 +78,6 @@ function Contact() {
                         <div className="flex gap-4">
                             <a href="https://www.linkedin.com/in/marboubernad/" className="hover:text-blue-700 transition-colors"><FaLinkedin size={36}/></a>
                             <a href="https://github.com/marbobe" className="hover:text-gray-700 transition-colors"><FaGithub size={36}/></a>
-                            <a href="mailto:marboubernad@gmail.com" className="hover:text-pink-400 transition-colors"><FaEnvelope size={36}/></a>
                         </div>
                     </div>
 
@@ -106,8 +99,9 @@ function Contact() {
                     <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="flex flex-col gap-2">
-                                <label className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.name_label')}</label>
+                                <label for="name" className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.name_label')}</label>
                                 <input 
+                                    id='name'
                                     type="text" 
                                     name="name"  
                                     required
@@ -116,8 +110,9 @@ function Contact() {
                                 />
                             </div>
                             <div className="flex flex-col gap-2">
-                                <label className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.email_label')}</label>
+                                <label for='email' className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.email_label')}</label>
                                 <input 
+                                    id='email'
                                     type="email" 
                                     name="email" 
                                     required
@@ -128,8 +123,9 @@ function Contact() {
                         </div>
                         
                         <div className="flex flex-col gap-2">
-                             <label className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.message_label')}</label>
+                             <label for='message' className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.message_label')}</label>
                              <textarea 
+                                id='message'
                                 rows="5" 
                                 name="message" 
                                 required
