@@ -1,12 +1,15 @@
 import { useTranslation } from 'react-i18next';
-import { FaGithub, FaLinkedin, FaPaperPlane, FaEnvelope, FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaPaperPlane, FaCheckCircle, FaExclamationTriangle } from 'react-icons/fa';
 import { useRef , useState , useEffect} from 'react';
 import emailjs from '@emailjs/browser';
 import SectionTitle from './SectionTitle';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function Contact() {
   const { t } = useTranslation();
   const formRef = useRef(); 
+  const captchaRef = useRef(null);
+
   const [isSending, setIsSending] = useState(false);
   const [feedback, setFeedback] = useState(null); 
 
@@ -21,6 +24,16 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    {/* Validación del Captcha */}
+    const token = captchaRef.current.getValue();
+
+    if(!token) {
+        setFeedback('error');
+        console.log('Error de verificaicón del recaptcha, se debe verificar que no es un robot');
+        return;
+    }
+
     setIsSending(true);
 
     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -32,6 +45,7 @@ function Contact() {
           console.log(result.text);
           setFeedback('success');
           formRef.current.reset();
+          captchaRef.current.reset();
           setIsSending(false);
       }, (error) => {
           console.log(error.text);
@@ -96,10 +110,10 @@ function Contact() {
                     </div>
 
                     {/*Formulario */}
-                    <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-6">
+                    <form id='formulario' ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="flex flex-col gap-2">
-                                <label for="name" className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.name_label')}</label>
+                                <label htmlFor="name" className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.name_label')}</label>
                                 <input 
                                     id='name'
                                     type="text" 
@@ -110,7 +124,7 @@ function Contact() {
                                 />
                             </div>
                             <div className="flex flex-col gap-2">
-                                <label for='email' className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.email_label')}</label>
+                                <label htmlFor='email' className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.email_label')}</label>
                                 <input 
                                     id='email'
                                     type="email" 
@@ -123,7 +137,7 @@ function Contact() {
                         </div>
                         
                         <div className="flex flex-col gap-2">
-                             <label for='message' className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.message_label')}</label>
+                             <label htmlFor='message' className="font-bold font-mono text-xs uppercase text-gray-500">{t('contact.message_label')}</label>
                              <textarea 
                                 id='message'
                                 rows="5" 
@@ -132,6 +146,14 @@ function Contact() {
                                 disabled={isSending}
                                 className="w-full bg-gray-50 border-2 border-black p-3 font-mono focus:bg-yellow-50 focus:outline-none focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all resize-none disabled:opacity-50"
                              ></textarea>
+                        </div>
+
+                        <div className='mb-4'>
+                            <ReCAPTCHA 
+                                ref={captchaRef} 
+                                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                            />
+
                         </div>
                         
                         <button 

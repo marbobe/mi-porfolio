@@ -101,7 +101,7 @@ function Navbar(){
 
         {/* MENÚ DESPLEGABLE MÓVIL */}
             {isOpen && (
-                <div className="md:hidden bg-white border-t-4 border-black absolute w-full left-0 top-20 shadow-[0px_10px_0px_0px_rgba(0,0,0,0.5)]">
+                <div className="lg:hidden bg-white border-t-4 border-black absolute w-full left-0 top-20 shadow-[0px_10px_0px_0px_rgba(0,0,0,0.5)]">
                     <div className="flex flex-col">
                         {navLinks.map((link) => {
                              const isActive = activeId === link.id && link.id !== 'home';

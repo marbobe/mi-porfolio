@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin} from 'react-icons/fa';
 import { TypeAnimation } from "react-type-animation";
 
 function Footer() {
