@@ -68,8 +68,8 @@
       {
         "title": "GraphQL API",
         "subtitle": "Product Management",
-        "desc": "A robust, modular, and scalable API designed with layered architecture, SOLID principles, and DevOps best practices.",
-        "tags": ["Node.js", "Express", "GraphQL", "MongoDB", "Docker"],
+        "desc": "Backend designed with layered architecture and SOLID principles. Features a unit testing suite and automated deployment pipeline (CI/CD).",
+        "tags": ["Node.js", "Express", "GraphQL", "MongoDB", "Mocha/Chai", "Github Actions","Docker"],
         "alt_img": "GraphQL logo"
       },
       {
