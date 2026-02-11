@@ -88,6 +88,7 @@
     "message_label": "Tu Mensaje",
     "message_title": "Escríbeme",
     "send_btn": "ENVIAR MENSAJE",
+    "sending_btn":"ENVIANDO...",
     "socials": "ENCUÉNTRAME EN",
     "greeting": "TRABAJEMOS JUNTOS.",
     "success_title": "¡MENSAJE ENVIADO!",

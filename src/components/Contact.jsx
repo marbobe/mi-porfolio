@@ -182,7 +182,7 @@ function Contact() {
                                 disabled:bg-gray-400 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none
                             `}
                         >
-                            {isSending ? 'SENDING...' : t('contact.send_btn')} 
+                            {isSending ? t('contact.sending_btn') : t('contact.send_btn')} 
                             {!isSending && <FaPaperPlane className="text-lg"/>}
                         </button>
                     </form>

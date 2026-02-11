@@ -89,6 +89,7 @@
     "message_label": "Your Message",
     "message_title": "Message me",
     "send_btn": "SEND MESSAGE",
+    "sending_btn":"SENDING...",
     "socials": "FIND ME ON",
     "greeting": "LET'S WORK TOGETHER.",
     "success_title": "MESSAGE SENT!",
