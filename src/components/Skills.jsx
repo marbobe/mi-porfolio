@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from 'react-i18next';
 
 import { FaJava, FaNodeJs, FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub, FaDocker, FaBootstrap} from "react-icons/fa";
-import { SiJavascript, SiMysql, SiMongodb, SiSpringboot, SiExpress, SiLaravel, SiGraphql, SiHibernate, SiMongoose, SiGithubactions, SiTailwindcss } from "react-icons/si";
+import { SiJavascript, SiMysql, SiMongodb, SiSpringboot, SiExpress, SiLaravel, SiGraphql, SiHibernate, SiMongoose, SiGithubactions, SiTailwindcss, SiNextdotjs, SiPostman } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import SectionTitle from "./SectionTitle";
 
@@ -16,6 +16,7 @@ function Skills(){
     { name: "CSS3", category: "frontend", icon: <FaCss3Alt className="text-blue-600"/> },
     { name: "JavaScript", category: "frontend", icon: <SiJavascript className="text-yellow-400 bg-black"/> }, 
     { name: "React", category: "frontend", icon: <FaReact className="text-cyan-400"/> },
+    { name: "Next.js", category: "frontend", icon: <SiNextdotjs className="text-black"/> },
     { name: "Tailwind", category: "frontend", icon: <SiTailwindcss className="text-cyan-500"/> },
     { name: "Bootstrap", category: "frontend", icon: <FaBootstrap className="text-purple-600"/> },
     
@@ -39,6 +40,7 @@ function Skills(){
     { name: "GitHub", category: "tools", icon: <FaGithub className="text-black"/> },
     { name: "Docker", category: "tools", icon: <FaDocker className="text-blue-500"/> },
     { name: "CI/CD Actions", category: "tools", icon: <SiGithubactions className="text-blue-600"/> },
+    { name: "Postman", category: "tools", icon: <SiPostman className="text-orange-600"/> },
   ];
 
   
@@ -108,9 +110,8 @@ function Skills(){
                         key={index}
                         className="
                             flex items-center gap-3 p-2 bg-white border-2 border-black
-                            hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] 
+                            hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]
                             hover:-translate-y-1
-                            hover:bg-violet-100
                             transition-all duration-200 group
                         "
                     >
